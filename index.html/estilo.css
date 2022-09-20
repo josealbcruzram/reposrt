@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2? family=Share+Tech+Mono&family=Tenor+Sans&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: green;
+}
+
+/* HEADER*/
+.df-navbar {
+    margin: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: green;
+    padding: auto;
+    /*letra aplicada desde googlefonts*/
+    font-family: 'Tenor Sans', sans-serif;
+}
+
+.color {
+    background-color: #cfcfeb;
+}
+
+body {
+    background-image: url(./imagenes/fondo2.jpg);
+    width: 90%;
+}
+
+.container-fluid {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    grid-template-areas:
+        "header header header header"
+        "section1 section2 section3 section3 "
+        "section1 section2 section3 section3"
+        "footer footer footer footer"
+}
+
+header {
+    grid-area: header;
+}
+
+.section1 {
+    grid-area: section1;
+}
+
+.section2 {
+    grid-area: section2;
+}
+
+.section3 {
+    grid-area: section3;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/*imagenes con acceso a productos*/
+.peppa {
+    width: 200px;
+}
+
+.clarin {
+    width: 200px;
+}
+
+/*intente colocar el titulo debajo de la imagen*/
+.section1 {
+    margin: 10%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.section2 {
+    margin: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    color: blue;
+    text-align: center;
+
+}
+
+.titulo2 {
+    margin: auto;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    color: green;
+    font-family: 'Share Tech Mono', monoespacio;
+    /* Aplicando Gradient */
+    background: linear-gradient(to top, rgb(101, 199, 212), rgb(236, 227, 227), rgb(178, 166, 230));
+}
+
+.parrafos {
+    margin: auto;
+    padding: 10px;
+    color: blue;
+}
+
+.img {
+    width: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.galeria {
+    padding: 1%;
+    width: 200%;
+    margin: auto;
+}
+
+.header-logo img {
+    display: flex;
+    border-radius: 20%;
+    align-content: flex-start;
+    margin: auto;
+    width: 120px;
+}
+
+.df-ul {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.df-ul li {
+    margin: 15px;
+}
+
+.formul {
+    margin: 20px;
+    padding: 20px;
+    width: auto;
+    display: flex;
+    text-align: center;
+}
+
+.contac a i {
+    font-size: 25px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+/*colores de texto del main*/
+.contenido {
+    color: black;
+    text-align: center;
+}
+
+.text-white {
+    font-family: 'Tenor Sans', sans-serif;
+    color: black;
+    font-weight: 400px;
+}
+
+.df-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.bg-footer {
+    padding: 10px;
+    margin: 5vh;
+    width: auto;
+    display: flex;
+}
+
+/*animacion a los iconos del footer*/
+.contac a i:hover {
+    transform: scale(1.5);
+    transition: all 1s ease;
+}
+
+.header-logo img:hover {
+    transform: rotate(50deg);
+}
+
+.section1:hover {
+    transform: translate(10px, 10px);
+}
+
+.section2:hover {
+    transform: translate(10deg, 10deg);
+}
+
+.section3:hover {
+    transform: scale(1, 2)
+}
+
+.formul:hover {
+    transform: scale(2, 2);
+}
+
+@media screen and (max-width:500px) {
+    .container-fluid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, min-content);
+        gap: 10px;
+        grid-template-areas:
+            "header "
+            "section1"
+            "section2 "
+            "section3 "
+            "footer "
+    }
+
+    body {
+        background-image: url(./imagenes/breakingnew.webp);
+    }
+
+    .parrafos {
+        color: black;
+    }
+
+    .titulo2 {
+        color: blue;
+    }
+
+    .df-navbar {
+        display: grid;
+    }
+
+    .df-ul {
+        display: grid;
+    }
+
+    .df-ul:hover {
+        transform: translate(10px, 10px);
+    }
+}
